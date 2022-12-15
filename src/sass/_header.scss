@@ -1,8 +1,7 @@
-.header{
+.header-h{
     padding: 40px 0 60px;
 
-    background:rgba(0, 0, 0, 0.56);
-    background-image: url('../images/abstract-background-with-red-lines\ 1@1x.jpg');
+    background-image:url('../images/abstract-background-with-red-lines\ 1@1x.jpg');
    
     max-width: 768px;
     margin-left: auto;
@@ -17,22 +16,22 @@
  }
 }
 
-.nav__wrapper{
+.nav__wrapper-h{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-icon{
+.logo-icon-h{
     width: 24px;
     height: 24px;
 }
 
-.nav__list{
+.nav__list-h{
     display: flex;
 }
 
-.nav__item{
+.nav__item-h{
    margin-bottom: 50px;
     &:first-child{
         margin-right: 40px;
@@ -40,7 +39,7 @@
 
 }
 
-.nav__link{
+.nav__link-h{
     font-family: 'Roboto', sans-serif; 
     font-size: 14px;
     font-weight: 500;
@@ -61,11 +60,11 @@
     }
 }
 
-.form-thumb{
+.form-thumb-h{
     position: relative;
 }
 
-.input-search{
+.input-search-h{
     width:100%;
     height: 30px;
     
@@ -85,7 +84,7 @@
 }
 
    
-.form-btn{
+.form-btn-h{
     position: absolute;
     bottom:8px;
     right: 0;
@@ -95,7 +94,7 @@
    
 }
 
-.search-icon{
+.search-icon-h{
     display: block;
     width: 12px;
     height: 12px;
