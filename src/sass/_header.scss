@@ -1,7 +1,7 @@
 .header-h{
-    padding: 40px 0 60px;
+    padding: 40px 0 90px;
 
-    background-image:url('../images/abstract-background-with-red-lines\ 1@1x.jpg');
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.56),rgba(0,0,0,0)),url('../images/header-img/header-bg-mobile@1x.jpg');
    
     max-width: 768px;
     margin-left: auto;
@@ -12,19 +12,31 @@
     @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-      background-image: url('../images/abstract-background-with-red-lines\ 1@2x.jpg');
+      background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.56),rgba(0,0,0,0)), url('../images/header-img/header-bg-mobile@2x.jpg');
  }
+    @media(min-width:768px){
+        background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.56),rgba(0,0,0,0)),url('../images/header-img/header-bg-tablet@1x.png');
+        @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+      background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.56),rgba(0,0,0,0)), url('../images/header-img/header-bg-tablet@2x.png');
+    }
+    }
 }
 
 .nav__wrapper-h{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .logo-icon-h{
     width: 24px;
     height: 24px;
+}
+.logo__text{
+    display: none;
 }
 
 .nav__list-h{
@@ -32,7 +44,7 @@
 }
 
 .nav__item-h{
-   margin-bottom: 50px;
+   
     &:first-child{
         margin-right: 40px;
     }
@@ -52,8 +64,8 @@
     &--current::after{
         content: '';
         position: absolute;
-        left:0;
-        bottom: 0;
+        top:0;
+        right: 0;
         width: 100%;
         height: 3px;
         background-color: #FF001B;
@@ -70,7 +82,7 @@
     
     padding: 16px 0;
     background-color: transparent;
-
+    margin-bottom: 16px;
     border-right: none;
     border-left: none;
     border-top: none;
@@ -83,13 +95,22 @@
    
 }
 
+.form-label{
+    display: block;
+    width: 100%;
+    color:#FF001B;
+}
+
    
 .form-btn-h{
     position: absolute;
-    bottom:8px;
-    right: 0;
+    z-index: 5;
+    top:0;
+    right: -8px;
     background-color: transparent;
     border: none;
+    padding: 16px;
+   
     
    
 }
@@ -98,5 +119,6 @@
     display: block;
     width: 12px;
     height: 12px;
+   
 
 }
