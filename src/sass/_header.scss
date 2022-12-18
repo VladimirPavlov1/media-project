@@ -35,8 +35,22 @@
     width: 24px;
     height: 24px;
 }
-.logo__text{
+
+.logo__wrapper-h{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+}
+
+.logo__text-h{
     display: none;
+    @media(min-width:768px){
+        display: block;
+        color:#ffffff;
+        font-size: 30px;
+        font-weight: 500;
+    }
 }
 
 .nav__list-h{
@@ -95,10 +109,11 @@
    
 }
 
-.form-label{
-    display: block;
+.form__label{
+    display: none;
     width: 100%;
     color:#FF001B;
+    font-size: 14px;
 }
 
    
