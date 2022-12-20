@@ -1,6 +1,7 @@
-const formEl=document.querySelector('.form-search');
-console.log(formEl)
+const formEl=document.querySelector('[data-search]');
+console.dir(formEl);
 
+console.log('hi');
 
 function createCardMovie(arr){
     return arr.map(item=>`<li class="gallery__item">
@@ -11,7 +12,8 @@ function createCardMovie(arr){
   </li>`).join("")
 }
 
+function fetchMovie(){
 fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=27cddf1230eab22bdf20f54c99a70037")
 .then(response=>response.json())
-.then(data=>console.log(data.results))
-
+.then(data=>data.results)
+}
