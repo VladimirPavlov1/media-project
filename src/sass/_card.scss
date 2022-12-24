@@ -1,0 +1,62 @@
+.gallery{
+    display:block;
+    margin:0 auto;
+   
+    @media(min-width:768px){
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -16px;
+        padding: 60px 0;
+    }
+    @media(min-width:1200px){
+       
+       margin: 0 7.5px;
+       
+    }
+}
+
+.gallery__item{
+    width: 280px;
+    margin: 20px auto;
+    @media(min-width:768px){
+        width: 336px;
+        margin:16px;
+    }
+    @media(min-width:1200px){
+        width:395px;
+       margin: 8px;
+    }
+}
+.thumb-text{
+    display: flex;
+}
+.film-title{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.17;
+    margin-top:10px;
+    text-transform: uppercase;
+
+}
+.film-genre{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    color:#FF6B08;
+    margin-top: 10px
+}
+.text-element{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.film-data{ 
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    color:#FF6B08;
+    margin-top: 10px;
+}

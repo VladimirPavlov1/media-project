@@ -2,6 +2,9 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
+    @media(min-width:768px){
+        padding: 0 16px;
+    }
 }
 
 ul{
@@ -15,4 +18,19 @@ li{
 }
 .link{
     display: block;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height:auto;
+    margin:0 auto ;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0;  
 }
