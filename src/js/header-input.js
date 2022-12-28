@@ -16,11 +16,53 @@ console.log(refs)
 const apiService = new ApiService();
 console.log(apiService)
 
-apiService.fetchMovieTrending().then(results=>{
-    console.log(results);
-    refs.galleryEl.insertAdjacentHTML('beforeend',createCardMovie(results))
 
-});
+
+apiService.getBaseGenresArr().then(data=>{
+   
+    let genresBase=data.genres
+    console.log(genresBase);
+    function findGenre(el){
+      
+       let result;
+        genresBase.forEach(genre =>{    
+          if(el===genre.id){
+            result= genre.name;
+           
+          }    
+        
+        })
+        return result 
+    }
+    console.log(findGenre(28))
+ 
+    apiService.fetchMovieTrending().then(data=>{
+        return data.map(({genre_ids})=>{
+        console.log(genre_ids)
+        let newArrGenre=[];
+        for(let i=0;i<genre_ids.length;i+=1){
+            console.log(genre_ids[i])
+            console.log(findGenre(genre_ids[i]))
+
+           
+        }
+    }) 
+        
+    })
+  
+})
+
+
+function rendPopular(){
+    apiService.fetchMovieTrending().then(results=>{
+        console.log(results);
+        let genres_name ='';
+        refs.galleryEl.insertAdjacentHTML('beforeend',createCardMovie(results))
+    
+    });
+}
+
+rendPopular();
 
 refs.formEl.addEventListener('submit', onFormSubmit)
 
@@ -37,8 +79,11 @@ function onFormSubmit(e){
 
     if (apiService.query.trim() === '') {
            refs.labelEl.style.opacity=1;
+           rendPopular();
            
-    }else{ refs.labelEl.style.opacity=0;}
+    }else{ refs.labelEl.style.opacity=0;
+        clearGallery();
+    }
    
     
     apiService.fetchMovieSearch().then(results=>{

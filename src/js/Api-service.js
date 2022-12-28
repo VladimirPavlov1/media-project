@@ -5,6 +5,9 @@ export default class {
     constructor(){
         this.searchQuery='';
         this.page=1;
+        this.genresArr=this.getBaseGenresArr();
+       
+       
     }
 
     fetchMovieTrending(){
@@ -19,7 +22,18 @@ export default class {
         .then(response=>response.json())
         .then(data=>data.results)
     }
- 
+
+    getBaseGenresArr(arr){
+        return fetch(`${BASE_URL}genre/movie/list?${API_KEY}`)
+        .then(response=>response.json())
+        
+        
+            
+       
+        
+    }
+    
+
     get query(){
         return this.searchQuery;
     }

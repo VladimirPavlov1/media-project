@@ -10,3 +10,4 @@ export default function createCardMovie(arr){
     </div>
   </li>`).join("")
 }
+
